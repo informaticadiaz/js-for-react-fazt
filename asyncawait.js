@@ -21,11 +21,13 @@ console.log(data)
 
 // para manejar las respuestas
 // podemos convertir la respuesta a un json
-
+// en este caso mostramos 
+// el contenido de la repuesta en el dom
 fetch('https://jsonplaceholder.typicode.com/users')
   .then(function (response) {
     return response.json()
   }).then(function (data) {
+    console.log("este fetch fue procesado con .json()")
     console.log(data)
     data.forEach(function (user) {
       const li = document.createElement('li')
